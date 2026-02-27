@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Gallery</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Quote Gallery</h1>
+      <p>Wisdom from thinkers across history</p>
+    </header>
+
+    <main>
+      <section id="quote-detail" class="quote-detail hidden">
+        <!-- Single quote detail shown here -->
+         <div class="detail-card">
+          <button id="close-detail">✕ Close</button>
+          <blockquote id="quote-text"></blockquote>
+          <cite id="quote-cite"></cite>
+          <p>Topic: <strong id="quote-topic"></strong></p>
+        </div>
+      </section>
+
+      <section class="controls">
+        <label for="topic-filter">Filter by topic:</label>
+        <select id="topic-filter">
+          <option value="">All Topics</option>
+          <option value="science">Science</option>
+          <option value="leadership">Leadership</option>
+          <option value="philosophy">Philosophy</option>
+          <option value="art">Art</option>
+        </select>
+      </section>
+      
+      <p id="error" class="hidden"></p>
+
+      <section id="quotes-container" class="quotes-grid">
+        <!-- Quotes rendered here by main.js -->
+      </section>
+
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

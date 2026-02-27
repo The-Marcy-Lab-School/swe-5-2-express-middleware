@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #f9f7f2;
+  color: #333;
+  min-height: 100vh;
+}
+
+header {
+  background: #2c3e50;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+}
+
+/* ── Filter controls ── */
+
+.controls {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.controls label {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.controls select {
+  padding: 0.4rem 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #2c3e50;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+/* ── Quote cards grid ── */
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.quote-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quote-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.quote-card blockquote {
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.quote-card cite {
+  font-weight: bold;
+  color: #2c3e50;
+  font-style: normal;
+  font-size: 0.95rem;
+}
+
+.topic-tag {
+  display: inline-block;
+  background: #e8f4f8;
+  color: #2980b9;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  align-self: flex-start;
+}
+
+.empty-message {
+  font-family: sans-serif;
+  color: #888;
+  grid-column: 1 / -1;
+}
+
+/* ── Detail panel ── */
+
+.quote-detail {
+  margin-bottom: 2rem;
+}
+
+.quote-detail.hidden {
+  display: none;
+}
+
+.detail-card {
+  background: white;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+}
+
+.detail-card blockquote {
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.detail-card cite {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2c3e50;
+  font-style: normal;
+}
+
+.detail-card p {
+  margin-top: 0.75rem;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+#close-detail {
+  float: right;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: sans-serif;
+}
+
+#close-detail:hover {
+  background: #f0f0f0;
+}
