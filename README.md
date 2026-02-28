@@ -44,7 +44,7 @@ Short response questions can be found in the `short-response.md` file. Write you
 
 You will build an Express server that:
 
-1. **Serves a frontend application** — `index.html`, `main.js`, and `style.css` from the `frontend/` folder are already complete. Your server makes them available in the browser.
+1. **Serves a frontend application** — `index.html`, `main.js`, `fetch-helper.js`, `dom-helper.js`, and `style.css` from the `frontend/` folder are already complete. Your server makes them available in the browser.
 2. **Exposes an API** with two endpoints that the frontend uses to fetch and display quotes.
 3. **Logs every request** using custom middleware.
 
@@ -83,7 +83,7 @@ This assignment has 17 requirements:
 - [ ] `GET /api/quotes?topic=science` (or any valid topic) returns only matching quotes
 - [ ] `GET /api/quotes/:id` responds with the single quote whose `id` matches
 - [ ] `GET /api/quotes/:id` responds with status `404` and a JSON error when the id has no match
-- [ ] All controllers are defined as named functions (not inline arrow functions)
+- [ ] All controllers are defined as named arrow functions (not anonymous inline arrow functions)
 - [ ] A catch-all fallback responds with status `404` and a JSON error for all unmatched routes
 
 **Deployment (3 pts)**
@@ -137,7 +137,7 @@ With your server running, open a **second terminal tab** and run each command. U
 curl http://localhost:8080/api/quotes
 
 # Filter by topic
-curl "http://localhost:8080/api/quotes?topic=philosophy"
+curl "http://localhost:8080/api/quotes?topic=science"
 
 # Single quote by id
 curl http://localhost:8080/api/quotes/5
