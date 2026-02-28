@@ -23,6 +23,7 @@ After cloning your repository, run:
 
 ```sh
 git checkout -b draft
+cd server
 npm install # installs express dependencies
 npm run dev
 ```
@@ -98,7 +99,7 @@ This assignment has 17 requirements:
 
 > ✅ You will know that you've completed this step when you can run `npm run dev` and see `Server listening on http://localhost:8080` in your terminal.
 
-Your `package.json` already lists `express` as a dependency. Run `npm install` to install it.
+The `server/package.json` already lists `express` as a dependency. From inside the `server/` directory, run `npm install` to install it.
 
 Open `server/index.js`. The file already imports `express` and `path`, creates the app, defines the `quotes` array, and calls `app.listen()`. Your job is to fill in the middleware, controllers, and endpoints between those two bookends.
 
