@@ -44,7 +44,7 @@ Short response questions can be found in the `short-response.md` file. Write you
 
 You will build an Express server that:
 
-1. **Serves a frontend application** — `index.html`, `main.js`, `fetch-helper.js`, `dom-helper.js`, and `style.css` from the `frontend/` folder are already complete. Your server makes them available in the browser.
+1. **Serves a frontend application** — `index.html`, `main.js`, `fetch-helpers.js`, `dom-helpers.js`, and `style.css` from the `frontend/` folder are already complete. Your server makes them available in the browser.
 2. **Exposes an API** with two endpoints that the frontend uses to fetch and display quotes.
 3. **Logs every request** using custom middleware.
 
